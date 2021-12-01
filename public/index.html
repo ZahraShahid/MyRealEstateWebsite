@@ -2,9 +2,19 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="theme-color" content="#000000" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <link rel=icon href=%PUBLIC_URL%/assets/img/favicon.png sizes="20x20" type="image/png">
+
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="%PUBLIC_URL%/assets/css/vendor.css">
+    <link rel="stylesheet" href="%PUBLIC_URL%/assets/css/style.css">
+    <link rel="stylesheet" href="%PUBLIC_URL%/assets/css/responsive.css">       
+
+    <!-- <link rel="icon" href="%PUBLIC_URL%/favicon.ico" /> -->
+    <!-- <meta name="theme-color" content="#000000" /> -->
     <meta
       name="description"
       content="Web site created using create-react-app"
@@ -24,11 +34,11 @@
       work correctly both with client-side routing and a non-root public URL.
       Learn how to configure a non-root public URL by running `npm run build`.
     -->
-    <title>React App</title>
+    <title>My Real Estate</title>
   </head>
   <body>
-    <noscript>You need to enable JavaScript to run this app.</noscript>
-    <div id="root"></div>
+    <!-- <noscript>You need to enable JavaScript to run this app.</noscript> -->
+    <div id="root" ></div>
     <!--
       This HTML file is a template.
       If you open it directly in the browser, you will see an empty page.
@@ -39,5 +49,28 @@
       To begin the development, run `npm start` or `yarn start`.
       To create a production bundle, use `npm run build` or `yarn build`.
     -->
+     <!-- search popup start-->
+     <div class="body-overlay" id="body-overlay"></div>
+     <div class="td-search-popup" id="td-search-popup">
+         <form action="index.html" class="search-form">
+             <div class="form-group">
+                 <input type="text" class="form-control" placeholder="Search.....">
+             </div>
+             <button type="submit" class="submit-btn"><i class="fa fa-search"></i></button>
+         </form>
+     </div>
+     <!-- dkt-sitebar-menu end-->
+   <!-- <div id="mingrand"></div> -->
+ 
+     <!-- all plugins here -->
+     <!-- back to top area start -->
+     <div class="back-to-top">
+         <span class="back-top"><i class="fa fa-angle-up"></i></span>
+     </div>
+     <!-- back to top area end -->
+ 
+ 
+     <!-- all plugins here -->
+     <script src="%PUBLIC_URL%/assets/js/vendor.js"></script>
   </body>
 </html>
