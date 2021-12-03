@@ -1,5 +1,6 @@
 // import logo from './logo.svg';
 import './App.css';
+import { BrowserRouter as Router, HashRouter, Route, Switch } from "react-router-dom";
 
 import HomeV1 from './components/home-v1';
 import HomeV2 from './components/home-v2';
@@ -18,9 +19,11 @@ import BlogDetails from './components/blog-details';
 
 function App() {
   return (
+    <Router>
     <div className="App">
       <HomeV1 />
     </div>
+    </Router>
   );
 }
 

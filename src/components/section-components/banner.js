@@ -1,14 +1,13 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
-import parse from 'html-react-parser';
-
+import parse from 'html-react-parser'; 
 class Banner extends Component {
 
     render() {
 
         let publicUrl = process.env.PUBLIC_URL+'/'
 
-    return  <div className="banner-area banner-area-1 banner-area-bg" style={{background: 'url('+publicUrl+'assets/img/banner/1.png)'}}>
+    return(  <div className="banner-area banner-area-1 banner-area-bg" style={{background: 'url('+publicUrl+'assets/img/banner/1.png)'}}>
 			  <div className="container">
 			    <div className="banner-area-inner">
 			      <div className="row justify-content-center">
@@ -62,6 +61,7 @@ class Banner extends Component {
 			    </div>
 			  </div>
 			</div>
+	);
 
         }
 }

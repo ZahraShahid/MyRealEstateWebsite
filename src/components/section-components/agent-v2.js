@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
-import parse from 'html-react-parser';
-
+import parse from 'html-react-parser'; 
 class AgentV2 extends Component {
 
     render() {
