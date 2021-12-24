@@ -1,6 +1,7 @@
 // import logo from './logo.svg';
 import './App.css';
-import { BrowserRouter as Router, HashRouter, Route, Switch } from "react-router-dom";
+import { BrowserRouter as Router, HashRouter, Route, Routes, Switch } from "react-router-dom";
+import axios from 'axios';
 
 import HomeV1 from './components/home-v1';
 import HomeV2 from './components/home-v2';
@@ -20,9 +21,15 @@ import BlogDetails from './components/blog-details';
 function App() {
   return (
     <Router>
-    <div className="App">
-      <HomeV1 />
-    </div>
+      <div className="App">
+        { /*<HomeV1 />*/ }
+
+        <Routes>
+          <Route path="/sign-in" exact element={<SignIn/>} />
+          <Route path="/sign-up" exact element={<SignUp/>} />
+          <Route path="/contact" exact element={<Contact/>} />
+        </Routes>
+        </div>
     </Router>
   );
 }
