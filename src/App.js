@@ -22,12 +22,14 @@ function App() {
   return (
     <Router>
       <div className="App">
-        { /*<HomeV1 />*/ }
+        {/* <HomeV1 /> */}
 
         <Routes>
           <Route path="/sign-in" exact element={<SignIn/>} />
           <Route path="/sign-up" exact element={<SignUp/>} />
           <Route path="/contact" exact element={<Contact/>} />
+          <Route path="/about" exact element={<About/>} />
+
         </Routes>
         </div>
     </Router>

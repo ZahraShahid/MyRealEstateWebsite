@@ -38,7 +38,7 @@ class About extends Component {
                             </ul>
                           </div>
                         </div>  
-                        <a className="btn btn-base" href="#">SEE MORE</a>
+                        {/* <a className="btn btn-base" href="#">SEE MORE</a> */}
                       </div>
                     </div>
                   </div>

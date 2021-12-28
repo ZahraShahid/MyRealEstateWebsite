@@ -16,9 +16,9 @@ const AboutPage = () => {
         <About />
         <Counter />
         <Service />
-        <AgentV3 />
+        {/* <AgentV3 /> */}
         <Testimonial />
-        <MoreInfo />
+        {/* <MoreInfo /> */}
         <Footer />
     </div>
 }
