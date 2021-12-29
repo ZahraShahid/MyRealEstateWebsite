@@ -17,10 +17,10 @@ const connection = moongoose.connection;
 connection.once('open',()=> {console.log("Mongo DB connection established sucessfully")});
 
 const AdminRouter = require('./routes/Admin');
-const AboutRouter = require('./routes/About');
+const ContactUsRouter = require('./routes/ContactUs');
 
 app.use('/Admin', AdminRouter);
-app.use('/About', AboutRouter);
+app.use('/ContactUs', ContactUsRouter);
 
 app.listen(port, () => {
     console.log(`Server is running on port: ${port}`);

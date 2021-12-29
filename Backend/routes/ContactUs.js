@@ -1,9 +1,9 @@
 const router = require('express').Router();
-let AboutDB = require('../models/About.models');
+let ContactUsDB = require('../models/contactUs.models');
 
 router.route('/').get((req, res) => {
-    AboutDB.findOne()
-    .then(About => res.json(About))
+    ContactUsDB.findOne()
+    .then(ContactUs => res.json(ContactUs))
     .catch(err => res.status(400).json('Error: ' + err));
 });
 

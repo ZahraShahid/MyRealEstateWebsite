@@ -2,7 +2,7 @@ const mongoose = require('mongoose');
 
 const Schema = mongoose.Schema;
 
-const aboutSchema = new Schema(
+const contactUsSchema = new Schema(
     {
         description: {type: String, required: true, minlength: 50},
         
@@ -32,6 +32,6 @@ const aboutSchema = new Schema(
     }
 );
 
-const About = mongoose.model('About', aboutSchema);
+const ContactUs = mongoose.model('ContactUS', contactUsSchema);
 
-module.exports = About;
+module.exports = ContactUs;

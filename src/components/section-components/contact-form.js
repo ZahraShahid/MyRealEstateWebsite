@@ -10,7 +10,7 @@ class ContactForm extends Component {
 		  super(props);
 
       this.state = {
-        About: []
+        ContactUs: []
 		  }
     }
 
@@ -20,11 +20,11 @@ class ContactForm extends Component {
 
      $( '.footer-area.style-two' ).removeClass( 'mg-top-100' );
 
-     axios.get('http://localhost:5000/About/')
+     axios.get('http://localhost:5000/ContactUs/')
      .then(response => {
         if (response.data) {
            this.setState({      
-             About: response.data
+             ContactUs: response.data
             });
         }
       })
@@ -43,13 +43,13 @@ class ContactForm extends Component {
                   <div className="col-xl-6 col-lg-7 mb-5 mb-lg-0">
                     <div className="contact-details-inner mng-box-shadow">
                       <h4>Address and contact information</h4>
-                      <p> {this.state.About.description} </p>
+                      <p> {this.state.ContactUs.description} </p>
                       <div className="row">
                         <div className="col-md-6">
                           <div className="contact-single-list">
                             <h5>Pakistan Office</h5>
                             <ul>
-                              <li><img src={publicUrl+"assets/img/icon/location2.png"} alt="img" /> {this.state.About.location}</li>
+                              <li><img src={publicUrl+"assets/img/icon/location2.png"} alt="img" /> {this.state.ContactUs.location}</li>
                               </ul>
                           </div>
                         </div>
@@ -57,9 +57,9 @@ class ContactForm extends Component {
                           <div className="contact-single-list">
                             <h5>Pakistan Office</h5>
                             <ul>
-                              <li><img src={publicUrl+"assets/img/icon/location2.png"} alt="img" /> {this.state.About.phoneNumber1}</li>
-                              <li><img src={publicUrl+"assets/img/icon/location2.png"} alt="img" /> {this.state.About.phoneNumber2}</li>
-                              <li><img src={publicUrl+"assets/img/icon/location2.png"} alt="img" /> {this.state.About.phoneNumber3}</li> 
+                              <li><img src={publicUrl+"assets/img/icon/location2.png"} alt="img" /> {this.state.ContactUs.phoneNumber1}</li>
+                              <li><img src={publicUrl+"assets/img/icon/location2.png"} alt="img" /> {this.state.ContactUs.phoneNumber2}</li>
+                              <li><img src={publicUrl+"assets/img/icon/location2.png"} alt="img" /> {this.state.ContactUs.phoneNumber3}</li> 
                             </ul>
                           </div>
                         </div>
@@ -67,17 +67,17 @@ class ContactForm extends Component {
                       <div className="row mt-4">
                         <div className="col-md-6">
                           <div className="contact-single-date">
-                            <p><strong>{this.state.About.days1}</strong> {this.state.About.timings1}</p>
-                            <p><strong>{this.state.About.days2}</strong> {this.state.About.timings2}</p>
-                            <p><strong>{this.state.About.days3} </strong> {this.state.About.timings3}</p>
+                            <p><strong>{this.state.ContactUs.days1}</strong> {this.state.ContactUs.timings1}</p>
+                            <p><strong>{this.state.ContactUs.days2}</strong> {this.state.ContactUs.timings2}</p>
+                            <p><strong>{this.state.ContactUs.days3} </strong> {this.state.ContactUs.timings3}</p>
                           </div>
                         </div>
                         <div className="col-md-6 align-self-center text-md-right">
                           <ul className="social-area style-3">
-                            <li><a href={this.state.About.facebook}><i className="fab fa-facebook-f" aria-hidden="true" /></a></li>
-                            <li><a href={this.state.About.twitter}><i className="fab fa-twitter" aria-hidden="true" /></a></li>
-                            <li><a href={this.state.About.instagram}><i className="fab fa-instagram" aria-hidden="true" /></a></li>
-                            <li><a href={this.state.About.skype}><i className="fab fa-skype" aria-hidden="true" /></a></li>
+                            <li><a href={this.state.ContactUs.facebook}><i className="fab fa-facebook-f" aria-hidden="true" /></a></li>
+                            <li><a href={this.state.ContactUs.twitter}><i className="fab fa-twitter" aria-hidden="true" /></a></li>
+                            <li><a href={this.state.ContactUs.instagram}><i className="fab fa-instagram" aria-hidden="true" /></a></li>
+                            <li><a href={this.state.ContactUs.skype}><i className="fab fa-skype" aria-hidden="true" /></a></li>
                           </ul>
                         </div>
                       </div>
@@ -129,7 +129,7 @@ class ContactForm extends Component {
                 </div>
               </div>
               <div className="contact-page-map mg-top-100">
-                <iframe src={this.state.About.locationLink}/>
+                <iframe src={this.state.ContactUs.locationLink}/>
               </div>
             </div>
 
