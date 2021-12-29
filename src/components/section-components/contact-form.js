@@ -1,7 +1,18 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import parse from 'html-react-parser'; 
+import axios from 'axios';
+
 class ContactForm extends Component {
+
+    constructor(props)
+	  {
+		  super(props);
+
+      this.state = {
+        About: []
+		  }
+    }
 
   componentDidMount() {
 
@@ -9,7 +20,18 @@ class ContactForm extends Component {
 
      $( '.footer-area.style-two' ).removeClass( 'mg-top-100' );
 
-   }
+     axios.get('http://localhost:5000/About/')
+     .then(response => {
+        if (response.data) {
+           this.setState({      
+             About: response.data
+            });
+        }
+      })
+      .catch((error) => {
+        console.log(error);
+      })
+    }
 
     render() {
 
@@ -20,26 +42,24 @@ class ContactForm extends Component {
                 <div className="row">
                   <div className="col-xl-6 col-lg-7 mb-5 mb-lg-0">
                     <div className="contact-details-inner mng-box-shadow">
-                      <h4>Adipisicing elit se tempor labore .</h4>
-                      <p>Lorem ipsum dolor  consectetur aLorem ipsum   consectetur adipisicing elit, eiusmod tempor incididunt labore et dolore magna aliqua.minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo</p>
+                      <h4>Address and contact information</h4>
+                      <p> {this.state.About.description} </p>
                       <div className="row">
                         <div className="col-md-6">
                           <div className="contact-single-list">
-                            <h5>India Office</h5>
+                            <h5>Pakistan Office</h5>
                             <ul>
-                              <li><img src={publicUrl+"assets/img/icon/location2.png"} alt="img" /> 420 Love Sreet 133/2 Mirpur  Nevis, Caribbean Dhaka</li>
-                              <li><img src={publicUrl+"assets/img/icon/location2.png"} alt="img" /> +(066) 19 5017 800 628</li>
-                              <li><img src={publicUrl+"assets/img/icon/location2.png"} alt="img" /> +(066) 19 5017 800 628</li>
-                            </ul>
+                              <li><img src={publicUrl+"assets/img/icon/location2.png"} alt="img" /> {this.state.About.location}</li>
+                              </ul>
                           </div>
                         </div>
                         <div className="col-md-6">
                           <div className="contact-single-list">
-                            <h5>India Office</h5>
+                            <h5>Pakistan Office</h5>
                             <ul>
-                              <li><img src={publicUrl+"assets/img/icon/location2.png"} alt="img" /> +(066) 19 5017 800 628</li>
-                              <li><img src={publicUrl+"assets/img/icon/location2.png"} alt="img" /> +(066) 19 5017 800 628</li>
-                              <li><img src={publicUrl+"assets/img/icon/location2.png"} alt="img" /> +(066) 19 5017 800 628</li>
+                              <li><img src={publicUrl+"assets/img/icon/location2.png"} alt="img" /> {this.state.About.phoneNumber1}</li>
+                              <li><img src={publicUrl+"assets/img/icon/location2.png"} alt="img" /> {this.state.About.phoneNumber2}</li>
+                              <li><img src={publicUrl+"assets/img/icon/location2.png"} alt="img" /> {this.state.About.phoneNumber3}</li> 
                             </ul>
                           </div>
                         </div>
@@ -47,17 +67,17 @@ class ContactForm extends Component {
                       <div className="row mt-4">
                         <div className="col-md-6">
                           <div className="contact-single-date">
-                            <p><strong>Monday-Friday:</strong> 9am - 8pm</p>
-                            <p><strong>Saturday:</strong> 10 am to 3 pm</p>
-                            <p><strong>Sunday: </strong> Clossed</p>
+                            <p><strong>{this.state.About.days1}</strong> {this.state.About.timings1}</p>
+                            <p><strong>{this.state.About.days2}</strong> {this.state.About.timings2}</p>
+                            <p><strong>{this.state.About.days3} </strong> {this.state.About.timings3}</p>
                           </div>
                         </div>
                         <div className="col-md-6 align-self-center text-md-right">
                           <ul className="social-area style-3">
-                            <li><a href="#"><i className="fab fa-facebook-f" aria-hidden="true" /></a></li>
-                            <li><a href="#"><i className="fab fa-twitter" aria-hidden="true" /></a></li>
-                            <li><a href="#"><i className="fab fa-instagram" aria-hidden="true" /></a></li>
-                            <li><a href="#"><i className="fab fa-skype" aria-hidden="true" /></a></li>
+                            <li><a href={this.state.About.facebook}><i className="fab fa-facebook-f" aria-hidden="true" /></a></li>
+                            <li><a href={this.state.About.twitter}><i className="fab fa-twitter" aria-hidden="true" /></a></li>
+                            <li><a href={this.state.About.instagram}><i className="fab fa-instagram" aria-hidden="true" /></a></li>
+                            <li><a href={this.state.About.skype}><i className="fab fa-skype" aria-hidden="true" /></a></li>
                           </ul>
                         </div>
                       </div>
@@ -109,7 +129,7 @@ class ContactForm extends Component {
                 </div>
               </div>
               <div className="contact-page-map mg-top-100">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d198059.49240377638!2d-84.68048827338674!3d39.13652252762691!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sbd!4v1615660592820!5m2!1sen!2sbd" />
+                <iframe src={this.state.About.locationLink}/>
               </div>
             </div>
 
