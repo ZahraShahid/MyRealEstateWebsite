@@ -8,6 +8,7 @@ import AgentV3 from './section-components/agent-v3';
 import Testimonial from './section-components/testimonial-v3';
 import MoreInfo from './section-components/more-info';
 import Footer from './global-components/footer-v2';
+import axios from 'axios';
 
 const AboutPage = () => {
     return <div>
