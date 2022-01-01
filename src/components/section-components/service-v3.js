@@ -1,7 +1,36 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import parse from 'html-react-parser'; 
+import axios from 'axios';
 class ServiceV3 extends Component {
+
+	constructor(props)
+	{
+		super(props);
+
+	this.state = {
+	  AboutUs: []
+		}
+  }
+
+componentDidMount() {
+
+  const $ = window.$;
+
+   $( '.footer-area.style-two' ).removeClass( 'mg-top-100' );
+
+   axios.get('http://localhost:5000/AboutUs/')
+   .then(response => {
+	  if (response.data) {
+		 this.setState({      
+		   AboutUs: response.data
+		  });
+	  }
+	})
+	.catch((error) => {
+	  console.log(error);
+	})
+  }
 
     render() {
 
@@ -16,8 +45,8 @@ class ServiceV3 extends Component {
 			            <img src={publicUrl+"assets/img/service/1.png"} alt="icon" />
 			          </div>
 			          <div className="single-service-details">
-			            <h4><a href="property-details.html">Sell Poparty</a></h4>
-			            <p>Lorem ipsum dolor sit consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore.</p>
+			            <h4><a href="property-details.html">Sell Property</a></h4>
+			            <p>  {this.state.AboutUs.SellProperty}</p>
 			          </div>
 			        </div>
 			      </div>
@@ -28,7 +57,7 @@ class ServiceV3 extends Component {
 			          </div>
 			          <div className="single-service-details">
 			            <h4><a href="property-details.html">Daily Apartment</a></h4>
-			            <p>Lorem ipsum dolor sit consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore.</p>
+			            <p> {this.state.AboutUs.DailyApartment}</p>
 			          </div>
 			        </div>
 			      </div>
@@ -39,7 +68,7 @@ class ServiceV3 extends Component {
 			          </div>
 			          <div className="single-service-details">
 			            <h4><a href="property-details.html">Family House</a></h4>
-			            <p>Lorem ipsum dolor sit consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore.</p>
+			            <p> {this.state.AboutUs.FamilyHouse}</p>
 			          </div>
 			        </div>
 			      </div>
