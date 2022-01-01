@@ -1,5 +1,5 @@
 import React from 'react';
-import Navbar from './global-components/navbar-v2';
+import Navbar from './global-components/navbar';
 import PageHeader from './global-components/page-header';
 import About from './section-components/about';
 import Counter from './section-components/counter';
@@ -16,9 +16,7 @@ const AboutPage = () => {
         <About />
         <Counter />
         <Service />
-        {/* <AgentV3 /> */}
         <Testimonial />
-        {/* <MoreInfo /> */}
         <Footer />
     </div>
 }
