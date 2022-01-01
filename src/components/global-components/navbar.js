@@ -59,11 +59,6 @@ class Navbar extends Component {
 			        <ul className="navbar-nav menu-open text-center">
 			          <li className="menu-item-has-children current-menu-item">
 			            <Link to="/">Home</Link>
-			            {/* <ul className="sub-menu">
-			              <li><Link to="/">Home 01</Link></li>
-			              <li><Link to="/home-v2">Home 02</Link></li>
-			              <li><Link to="/home-v3">Home 03</Link></li>
-			            </ul> */}
 			          </li>
 			          <li className="menu-item-has-children current-menu-item">
 			            <Link to="/property-grid">Property</Link>
@@ -83,14 +78,8 @@ class Navbar extends Component {
 			              <li><Link to="/add-property">Add Property</Link></li>
 			            </ul>
 			          </li>
-			          {/* <li className="menu-item-has-children current-menu-item">
-			            <a href="#">Blog</a>
-			            <ul className="sub-menu">
-			              <li><Link to="/blog">Blog</Link></li>
-			              <li><Link to="/blog-details">Blog Details</Link></li>
-			            </ul>
-			          </li> */}
 			          <li><Link to="/contact">Contact</Link></li>
+					  <li><Link to="/gallery">Gallery</Link></li>
 			        </ul>
 			      </div>
 			      <div className="nav-right-part nav-right-part-desktop">
