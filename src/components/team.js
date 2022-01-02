@@ -11,8 +11,6 @@ const TeamPage = () => {
         <Navbar />
         <PageHeader headertitle="Team"  />
         <Team />
-        <Testimonial />
-        <MoreInfo />
         <Footer />
     </div>
 }

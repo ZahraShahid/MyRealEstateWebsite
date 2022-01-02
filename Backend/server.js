@@ -19,10 +19,12 @@ connection.once('open',()=> {console.log("Mongo DB connection established sucess
 const AdminRouter = require('./routes/Admin');
 const ContactUsRouter = require('./routes/ContactUs');
 const AboutUsRouter = require('./routes/AboutUs');
+const TeamRouter = require('./routes/Team');
 
 app.use('/Admin', AdminRouter);
 app.use('/ContactUs', ContactUsRouter);
 app.use('/AboutUs', AboutUsRouter);
+app.use('/Team', TeamRouter);
 
 app.listen(port, () => {
     console.log(`Server is running on port: ${port}`);
