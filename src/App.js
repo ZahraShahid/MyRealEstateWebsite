@@ -29,14 +29,9 @@ function App() {
           <Route path="/sign-up" exact element={<SignUp/>} />
           <Route path="/contact" exact element={<Contact/>} />
           <Route path="/about" exact element={<About/>} />
-<<<<<<< HEAD
-          <Route path="/team" exact element={<AddProperty/>}/>
-          <></>
-=======
           <Route path="/gallery" exact element={<Gallery/>} />
           <Route path="/team" exact element={<Team/>} />
           <Route path="/property-grid" exact element={<ProptertyGrid/>} />
->>>>>>> e24587e73ccf9854b01f566c18b6da373abef212
         </Routes>
         </div>
     </Router>
