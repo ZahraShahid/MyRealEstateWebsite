@@ -1,5 +1,7 @@
 // import logo from './logo.svg';
 import './App.css';
+import React, { Component } from 'react';
+import ReactDOM from 'react-dom';
 import { BrowserRouter as Router, HashRouter, Route, Routes, Switch } from "react-router-dom";
 import axios from 'axios';
 
@@ -11,26 +13,30 @@ import ProptertyGrid from './components/property-grid';
 import Propterty from './components/property';
 import About from './components/about';
 import Team from './components/team';
+import Gallery from "./components/gallery";
 import SignIn from './components/sign-in';
 import SignUp from './components/sign-up';
 import AddProperty from './components/add-property';
 import Contact from './components/contact';
-import Blog from './components/blog';
-import BlogDetails from './components/blog-details';
 
 function App() {
   return (
     <Router>
       <div className="App">
-        {/* <HomeV1 /> */}
-
         <Routes>
+        <Route path="/" exact element={<HomeV1/>} />
           <Route path="/sign-in" exact element={<SignIn/>} />
           <Route path="/sign-up" exact element={<SignUp/>} />
           <Route path="/contact" exact element={<Contact/>} />
           <Route path="/about" exact element={<About/>} />
+<<<<<<< HEAD
           <Route path="/team" exact element={<AddProperty/>}/>
           <></>
+=======
+          <Route path="/gallery" exact element={<Gallery/>} />
+          <Route path="/team" exact element={<Team/>} />
+          <Route path="/property-grid" exact element={<ProptertyGrid/>} />
+>>>>>>> e24587e73ccf9854b01f566c18b6da373abef212
         </Routes>
         </div>
     </Router>

@@ -1,5 +1,5 @@
 import React from 'react';
-import Navbar from './global-components/navbar-v2';
+import Navbar from './global-components/navbar';
 import PageHeader from './global-components/page-header';
 import About from './section-components/about';
 import Counter from './section-components/counter';
@@ -8,6 +8,7 @@ import AgentV3 from './section-components/agent-v3';
 import Testimonial from './section-components/testimonial-v3';
 import MoreInfo from './section-components/more-info';
 import Footer from './global-components/footer-v2';
+import axios from 'axios';
 
 const AboutPage = () => {
     return <div>
@@ -16,9 +17,7 @@ const AboutPage = () => {
         <About />
         <Counter />
         <Service />
-        {/* <AgentV3 /> */}
         <Testimonial />
-        {/* <MoreInfo /> */}
         <Footer />
     </div>
 }

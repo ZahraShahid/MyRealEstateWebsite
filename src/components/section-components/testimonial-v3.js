@@ -1,7 +1,36 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import parse from 'html-react-parser'; 
+import axios from 'axios';
 class TestimonialV3 extends Component {
+
+	constructor(props)
+	{
+		super(props);
+
+	this.state = {
+	  AboutUs: []
+		}
+  }
+
+componentDidMount() {
+
+  const $ = window.$;
+
+   $( '.footer-area.style-two' ).removeClass( 'mg-top-100' );
+
+   axios.get('http://localhost:5000/AboutUs/')
+   .then(response => {
+	  if (response.data) {
+		 this.setState({      
+		   AboutUs: response.data
+		  });
+	  }
+	})
+	.catch((error) => {
+	  console.log(error);
+	})
+  }
 
     render() {
 
@@ -11,9 +40,9 @@ class TestimonialV3 extends Component {
 			  <div className="bg-overlay-wrap">
 			    <div className="container">
 			      <div className="section-title style-white text-center">
-			        <h6>Our Testomonial </h6>
-			        <h2>What Client Say</h2>
-			        <p>Lorem ipsum dolor  amet, consectetur adipisicing elit Lorem ipsum dolor sit amet, </p>
+			        <h6> {this.state.AboutUs.testimonial} </h6>
+			        <h2>{this.state.AboutUs.clientSay}</h2>
+			        <p>{this.state.AboutUs.line1} </p>
 			      </div>
 			      <div className="row justify-content-center">
 			        <div className="col-lg-10">
@@ -24,7 +53,7 @@ class TestimonialV3 extends Component {
 			                  <img src={publicUrl+"assets/img/testimonial/quote.png"} alt="img" />
 			                </div>
 			                <div className="details">
-			                  <p>“consecte Lorem ipsum dolor sit amet, Lorem ipsum dolor amet, consecte Lorem ipsum dolor sit adipisicing amet, consectetur sed do eiusmod tempor dolore magna consecrem adipisicing ipsum dolor sit amet, incididunt sed do eiusmod tempor incididunt consectetur elit,’’ </p>
+			                  <p>“ {this.state.AboutUs.say1} ’’  </p>
 			                  <h6 className="name">Sarif Jaya Miprut</h6>
 			                  <span className="designation">Profile Manager</span>
 			                </div>
@@ -36,7 +65,7 @@ class TestimonialV3 extends Component {
 			                  <img src={publicUrl+"assets/img/testimonial/quote.png"} alt="img" />
 			                </div>
 			                <div className="details">
-			                  <p>“consecte Lorem ipsum dolor sit amet, Lorem ipsum dolor amet, consecte Lorem ipsum dolor sit adipisicing amet, consectetur sed do eiusmod tempor dolore magna consecrem adipisicing ipsum dolor sit amet, incididunt sed do eiusmod tempor incididunt consectetur elit,’’ </p>
+			                  <p>“ {this.state.AboutUs.say2}’’</p>
 			                  <h6 className="name">Sarif Jaya Miprut</h6>
 			                  <span className="designation">Profile Manager</span>
 			                </div>
