@@ -84,40 +84,40 @@ class ContactForm extends Component {
                     </div>
                   </div>
                   <div className="col-xl-6 col-lg-5">
-                    <form>
+                    <form action="https://formsubmit.co/estatereal512@gmail.com" method="POST">
                       <div className="row">
                         <div className="col-xl-6 col-md-6">
                           <div className="single-select-inner style-bg-border">
                             <select>
                               <option value={1}>General Information</option>
-                              <option value={2}>General Information</option>
-                              <option value={3}>General Information</option>
+                              <option value={2}>Query</option>
+                              <option value={3}>Request Appointment</option>
                             </select>
                           </div>
                         </div>
                         <div className="col-lg-6 col-md-6">
                           <label className="single-input-inner style-bg-border">
-                            <input type="text" placeholder="Subject" />
+                            <input type="text" name="Subject" placeholder="Subject" />
                           </label>
                         </div>
                         <div className="col-xl-12 col-lg-6">
                           <label className="single-input-inner style-bg-border">
-                            <input type="text" placeholder="Name" />
+                            <input type="text" name="Name" placeholder="Name" />
                           </label>
                         </div>
                         <div className="col-md-6">
                           <label className="single-input-inner style-bg-border">
-                            <input type="text" placeholder="Email" />
+                            <input type="text" name="Email" placeholder="Email" />
                           </label>
                         </div>
                         <div className="col-md-6">
                           <label className="single-input-inner style-bg-border">
-                            <input type="text" placeholder="Phone" />
+                            <input type="text" name= "Phone" placeholder="Phone" />
                           </label>
                         </div>
                         <div className="col-12">
                           <label className="single-input-inner style-bg-border">
-                            <textarea placeholder="Message" defaultValue={""} />
+                            <textarea name= "Message" placeholder="Message" defaultValue={""} />
                           </label>
                         </div>
                         <div className="col-12 mb-4">
