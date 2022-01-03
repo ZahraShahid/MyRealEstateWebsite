@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import parse from 'html-react-parser';
+import PropTypes from 'prop-types';
 
 const AgentProfile = ({
   name,
@@ -36,5 +37,13 @@ const AgentProfile = ({
     );
 };
 
+AgentProfile.propTypes = {
+  name: PropTypes.string.isRequired,
+  role: PropTypes.string.isRequired,
+  facebook: PropTypes.string.isRequired,
+  instagram: PropTypes.string.isRequired,
+  twitter: PropTypes.string.isRequired,
+  linkedIn: PropTypes.string.isRequired,
+};
 
 export default AgentProfile;
