@@ -2,29 +2,7 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import parse from 'html-react-parser'; 
 import axios from 'axios';
-
-const AgentProfile = props =>
-(
-  <div className="col-lg-4 col-md-6">
-    <div className="single-agent-wrap style-2 text-center">
-      <div className="thumb">
-        <img src={process.env.PUBLIC_URL+'/' +"assets/img/agent/7.png" }alt="img" />
-      </div> 
-
-      <div className="details">
-        <h4>{props.agent.name}</h4>
-        <h6>{props.agent.role}</h6>
-        <ul className="social-area style-2">
-          <li><a href={props.agent.facebook}><i className="fab fa-facebook-f" aria-hidden="true" /></a></li>
-          <li><a href={props.agent.linkedIn}><i className="fab fa-linkedin-in" aria-hidden="true" /></a></li>
-          <li><a href={props.agent.instagram}><i className="fab fa-instagram" aria-hidden="true" /></a></li>
-          <li><a href={props.agent.twitter}><i className="fab fa-twitter" aria-hidden="true" /></a></li>
-        </ul>
-      </div>   
-
-    </div>
-  </div>
-)
+import AgentProfile from './agent-profile';
 
 class Team extends Component {
 
@@ -52,13 +30,6 @@ class Team extends Component {
       })
     }
 
-
-    AgentsList()
-    {
-      return this.state.Agents.map(currentAgent => { return <AgentProfile agent = {currentAgent} />; })
-    }
-
-    
     render() {
 
         let publicUrl = process.env.PUBLIC_URL+'/'
@@ -67,7 +38,19 @@ class Team extends Component {
               <div className="container">
                 <div className="row">
                   {
-                    this.AgentsList()
+                    this.state.Agents.map((currentAgent) => { 
+                      return (
+                      <AgentProfile 
+                      key={Math.random()}
+                      name = {currentAgent.name}
+                      role = {currentAgent.role}
+                      facebook = {currentAgent.facebook}
+                      twitter = {currentAgent.twitter}
+                      linkedIn = {currentAgent.linkedIn}
+                      instagram = {currentAgent.instagram}
+                      />
+                      ); 
+                    })       
                   }
                 </div>
               </div>
@@ -76,4 +59,4 @@ class Team extends Component {
       }
 }
 
-export default Team
+export default Team;
