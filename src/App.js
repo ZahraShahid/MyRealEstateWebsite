@@ -32,6 +32,7 @@ function App() {
           <Route path="/team" exact element={<Team/>} />
           <Route path="/office-map" exact element={<MapPage/>} />
           <Route path="/property-grid" exact element={<ProptertyGrid/>} />
+          <Route path="/add-property" exact element={<AddProperty/>} />
         </Routes>
         </div>
     </Router>
