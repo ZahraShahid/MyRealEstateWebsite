@@ -84,7 +84,7 @@ class ContactForm extends Component {
                     </div>
                   </div>
                   <div className="col-xl-6 col-lg-5">
-                    <form action="https://formsubmit.co/estatereal512@gmail.com" method="POST">
+                    <form action={"https://formsubmit.co/" + this.state.ContactUs.email} method="POST">
                       <div className="row">
                         <div className="col-xl-6 col-md-6">
                           <div className="single-select-inner style-bg-border">
