@@ -54,8 +54,8 @@ componentDidMount() {
 			                </div>
 			                <div className="details">
 			                  <p>“ {this.state.AboutUs.say1} ’’  </p>
-			                  <h6 className="name">Sarif Jaya Miprut</h6>
-			                  <span className="designation">Profile Manager</span>
+			                  <h6 className="name">{this.state.AboutUs.ClientName1}</h6>
+			                  <span className="designation">{this.state.AboutUs.ClientPosition1}</span>
 			                </div>
 			              </div>
 			            </div>
@@ -66,8 +66,8 @@ componentDidMount() {
 			                </div>
 			                <div className="details">
 			                  <p>“ {this.state.AboutUs.say2}’’</p>
-			                  <h6 className="name">Sarif Jaya Miprut</h6>
-			                  <span className="designation">Profile Manager</span>
+			                  <h6 className="name">{this.state.AboutUs.ClientName2}</h6>
+			                  <span className="designation">{this.state.AboutUs.ClientPosition2}</span>
 			                </div>
 			              </div>
 			            </div>
