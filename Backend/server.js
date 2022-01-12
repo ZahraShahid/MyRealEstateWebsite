@@ -20,11 +20,14 @@ const AdminRouter = require('./routes/Admin');
 const ContactUsRouter = require('./routes/ContactUs');
 const AboutUsRouter = require('./routes/AboutUs');
 const TeamRouter = require('./routes/Team');
+const GalleryRouter = require('./routes/Gallery');
 
 app.use('/Admin', AdminRouter);
 app.use('/ContactUs', ContactUsRouter);
 app.use('/AboutUs', AboutUsRouter);
 app.use('/Team', TeamRouter);
+app.use('/Gallery', GalleryRouter);
+
 
 app.listen(port, () => {
     console.log(`Server is running on port: ${port}`);
