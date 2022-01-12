@@ -1,7 +1,34 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import parse from 'html-react-parser'; 
+import axios from 'axios';
+
 class Testimonial extends Component {
+	
+	constructor(props)
+	{
+		super(props);
+
+		this.state = {
+	 		AboutUs: []
+		}
+  	}
+
+	componentDidMount() {
+
+   		axios.get('http://localhost:5000/AboutUs/')
+   		.then(response => {
+	  	if (response.data) {
+			this.setState({      
+		   		AboutUs: response.data
+		  	});
+	  	}
+		})
+		.catch((error) => {
+	  		console.log(error);
+		})
+  	}
+
 
     render() {
 
@@ -10,9 +37,9 @@ class Testimonial extends Component {
     return <div className="testimonial-area pd-top-118 pd-bottom-120 bg-overlay" style={{background: 'url('+publicUrl+'assets/img/bg/2.png)'}}>
 			  <div className="bg-overlay-wrap">
 			    <div className="section-title style-white text-center">
-			      <h6>Our Testomonial </h6>
-			      <h2>What Client Say</h2>
-			      <p>Lorem ipsum dolor  amet, consectetur adipisicing elit Lorem ipsum dolor sit amet, </p>
+				<h6> {this.state.AboutUs.testimonial} </h6>
+			    <h2>{this.state.AboutUs.clientSay}</h2>
+			    <p>{this.state.AboutUs.line1} </p>
 			    </div>
 			    <div className="container">
 			      <div className="row justify-content-center">
@@ -24,8 +51,8 @@ class Testimonial extends Component {
 			                  <img src={publicUrl+"assets/img/testimonial/1.png"} alt="img" />
 			                </div>
 			                <div className="details">
-			                  <h6 className="name">Sarif Jaya Miprut</h6>
-			                  <p>“consecte Lorem ipsum dolor sit amet, Lorem ipsum dolor amet, consecte Lorem ipsum dolor sit adipisicing amet, consectetur sed do eiusmod tempor incididunt dolore magna consecrem adipisicing ipsum dolor sit amet, consectetur elit,’’ </p>
+			                  <h6 className="name">{this.state.AboutUs.ClientName1}</h6>
+			                  <p>“{this.state.AboutUs.say1}’’ </p>
 			                  <div className="rating-inner">
 			                    <i className="fas fa-star" />
 			                    <i className="fas fa-star" />
@@ -42,8 +69,8 @@ class Testimonial extends Component {
 			                  <img src={publicUrl+"assets/img/testimonial/4.png"} alt="img" />
 			                </div>
 			                <div className="details">
-			                  <h6 className="name">Sarif Jaya Miprut</h6>
-			                  <p>“consecte Lorem ipsum dolor sit amet, Lorem ipsum dolor amet, consecte Lorem ipsum dolor sit adipisicing amet, consectetur sed do eiusmod tempor incididunt dolore magna consecrem adipisicing ipsum dolor sit amet, consectetur elit,’’ </p>
+			                  <h6 className="name">{this.state.AboutUs.ClientName2}</h6>
+			                  <p>“{this.state.AboutUs.say2}’’ </p>
 			                  <div className="rating-inner">
 			                    <i className="fas fa-star" />
 			                    <i className="fas fa-star" />

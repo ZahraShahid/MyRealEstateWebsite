@@ -84,12 +84,10 @@ class Footer_v2 extends Component {
 		        </div>
 		        <div className="col-lg-2 col-md-6">
 		          <div className="widget widget_nav_menu">
-		            <h4 className="widget-title">Categories</h4>
+		            <h4 className="widget-title">Explore</h4>
 		            <ul>
-		              <li><Link to="/blog">Arts &amp; Design</Link></li>
-		              <li><Link to="/blog">Business</Link></li>
-		              <li><Link to="/blog">Computer Science</Link></li>
-		              <li><Link to="/blog">Data Science</Link></li>
+		              <li><Link to="/property-grid">- For Sale Properties</Link></li>
+		              <li><Link to="/property-grid">- For Rent Properties</Link></li>
 		            </ul>
 		          </div>
 		        </div>
@@ -112,7 +110,7 @@ class Footer_v2 extends Component {
 		    <div className="container">
 		      <div className="row">
 		        <div className="col-lg-6 align-self-center">
-		          <p>©2021, Copy Right By Solverwp. All Rights Reserved</p>
+		          <p>All Rights Reserved</p>
 		        </div>
 		        <div className="col-lg-6 text-lg-right">
 		          <ul>
@@ -121,9 +119,6 @@ class Footer_v2 extends Component {
 		            </li>
 		            <li>
 		              <Link to="/about">About</Link>
-		            </li>
-		            <li>
-		              <Link to="/blog">Blog</Link>
 		            </li>
 		            <li>
 		              <Link to="/contact">Contact</Link>

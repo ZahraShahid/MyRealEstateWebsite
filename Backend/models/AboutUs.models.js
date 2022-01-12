@@ -26,7 +26,10 @@ const AboutUsSchema = new Schema(
         say1: {type: String, minlength: 50},
         say2: {type: String,  minlength: 50},
 
-
+        ClientName1: {type: String, minlength:5},
+        ClientName2: {type: String, minlength:5},
+        ClientPosition1: {type: String, minlength:5},
+        ClientPosition2: {type: String, minlength:5},
     },
     {
         timestamps: true,

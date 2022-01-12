@@ -11,23 +11,23 @@ import Cta from './section-components/call-to-action';
 import Agent from './section-components/agent';
 import Client from './section-components/client';
 import LatestNews from './blog-components/latest-news';
-import Footer from './global-components/footer';
+import FooterV2 from './global-components/footer-v2';
 
 const Home_V1 = () => {
     return <div>
         <Navbar />
         <Banner />
         <Service />
-        <Product />
+        {/* <Product /> */}
         <Video />
-        <ProductV2 />
+        {/* <ProductV2 /> */}
         <Testimonial />
-        <Property />
-        <Cta />
+        {/* <Property /> */}
+        {/* <Cta /> */}
         <Agent />
-        <Client />
-        <LatestNews />
-        <Footer />
+        {/* <Client /> */}
+        {/* <LatestNews /> */}
+        <FooterV2 />
     </div>
 }
 
