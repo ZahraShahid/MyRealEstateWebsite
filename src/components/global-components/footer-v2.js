@@ -1,7 +1,17 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
+import axios from 'axios';
 
 class Footer_v2 extends Component {
+
+	constructor(props)
+	{
+		super(props);
+		
+     	this.state = {
+        	ContactUs: []
+		}
+    }
 
     componentDidMount() {
         let publicUrl = process.env.PUBLIC_URL+'/'
@@ -10,6 +20,18 @@ class Footer_v2 extends Component {
         minscript.src = publicUrl + "assets/js/main.js";
 
         document.body.appendChild(minscript);
+
+		axios.get('http://localhost:5000/ContactUs/')
+		.then(response => {
+		   if (response.data) {
+			  this.setState({      
+				ContactUs: response.data
+			   });
+		   }
+		 })
+		 .catch((error) => {
+		   console.log(error);
+		 })
     }
 
     render() {
@@ -23,16 +45,15 @@ class Footer_v2 extends Component {
 		    <div className="container">
 		      <div className="row">
 		        <div className="col-lg-6 col-md-4">
-		          <a href="index.html"><img src={publicUrl+"assets/img/logo.png"} alt="img" /></a>
+		          <a href="/"><img src={publicUrl+"assets/img/logo.png"} alt="img" /></a>
 		        </div>
 		        <div className="col-lg-6 col-md-8 text-md-right mt-3 mt-md-0">
 		          <ul className="social-area">
-		            <li><a href="https://www.facebook.com/solverwp/"><i className="fab fa-facebook-f" aria-hidden="true" /></a></li>
-		            <li><a href="https://www.twitter.com/solverwp/"><i className="fab fa-twitter" aria-hidden="true" /></a></li>
-		            <li><a href="https://www.instagram.com/solverwp/"><i className="fab fa-instagram" aria-hidden="true" /></a></li>
-		            <li><a href="https://www.skype.com/solverwp/"><i className="fab fa-skype" aria-hidden="true" /></a></li>
-		            <li><a href="https://www.pinterest.com/solverwp/"><i className="fab fa-pinterest-p" aria-hidden="true" /></a></li>
-		          </ul>
+		            <li><a href={this.state.ContactUs.facebook}><i className="fab fa-facebook-f" aria-hidden="true" /></a></li>
+		            <li><a href={this.state.ContactUs.twitter}><i className="fab fa-twitter" aria-hidden="true" /></a></li>
+		            <li><a href={this.state.ContactUs.instagram}><i className="fab fa-instagram" aria-hidden="true" /></a></li>
+		            <li><a href={this.state.ContactUs.skype}><i className="fab fa-skype" aria-hidden="true" /></a></li>
+		           </ul>
 		        </div>
 		      </div>
 		    </div>
@@ -44,9 +65,9 @@ class Footer_v2 extends Component {
 		          <div className="widget widget_about">
 		            <h4 className="widget-title">Contact Us</h4>
 		            <div className="details">
-		              <p><i className="fas fa-map-marker-alt" /> 420 Love Sreet 133/2 Mirpur City, Dhaka</p>
-		              <p><i className="fas fa-phone-volume" /> +(066) 19 5017 800 628</p>
-		              <p><i className="fas fa-envelope" /> info.contact@gmail.com</p>
+		              <p><i className="fas fa-map-marker-alt" /> {this.state.ContactUs.location}</p>
+		              <p><i className="fas fa-phone-volume" /> {this.state.ContactUs.phoneNumber1}</p>
+		              <p><i className="fas fa-envelope" /> {this.state.ContactUs.email}</p>
 		            </div>
 		          </div>
 		        </div>

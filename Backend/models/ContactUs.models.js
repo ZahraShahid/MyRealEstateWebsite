@@ -24,6 +24,7 @@ const contactUsSchema = new Schema(
         twitter: {type:String, minlength:5 },
         instagram: {type:String, minlength:5 },
         skype: {type:String, minlength:5 },
+        email: {type:String, minlength:5},
 
         locationLink: {type:String, required: true, minlength:5 },
     },
