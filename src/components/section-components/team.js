@@ -42,6 +42,7 @@ class Team extends Component {
                       return (
                       <AgentProfile 
                       key={Math.random()}
+                      image={currentAgent.image}
                       name = {currentAgent.name}
                       role = {currentAgent.role}
                       facebook = {currentAgent.facebook}
