@@ -5,7 +5,7 @@ router.route('/').get((req, res) => {
     VideoDB.find()
     .then(Video => res.json(Video))
     .catch(err => res.status(400).json('Error: ' + err));
-    console.log(res);
+    // console.log(res);
 });
 
 module.exports = router;

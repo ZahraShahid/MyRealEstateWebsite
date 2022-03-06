@@ -5,7 +5,7 @@ router.route('/').get((req, res) => {
     GalleryDB.find()
     .then(Gallery => res.json(Gallery))
     .catch(err => res.status(400).json('Error: ' + err));
-    console.log(res);
+    // console.log(res);
 });
 
 module.exports = router;
