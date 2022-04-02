@@ -4,6 +4,7 @@ import parse from 'html-react-parser';
 import PropTypes from 'prop-types';
 
 const AgentProfile = ({
+  image,
   name,
   role,
   facebook,
@@ -17,7 +18,7 @@ const AgentProfile = ({
     <div className="col-lg-4 col-md-6">
     <div className="single-agent-wrap style-2 text-center">
       <div className="thumb">
-        <img src={process.env.PUBLIC_URL+'/' +"assets/img/agent/7.png" }alt="img" />
+        <img src={image }alt="img" />
       </div> 
 
       <div className="details">
@@ -38,6 +39,7 @@ const AgentProfile = ({
 };
 
 AgentProfile.propTypes = {
+  image: PropTypes.string.isRequired,
   name: PropTypes.string.isRequired,
   role: PropTypes.string.isRequired,
   facebook: PropTypes.string.isRequired,
