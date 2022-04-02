@@ -22,6 +22,7 @@ const AboutUsRouter = require('./routes/AboutUs');
 const TeamRouter = require('./routes/Team');
 const GalleryRouter = require('./routes/Gallery');
 const VideoRouter = require('./routes/Video');
+const MapsRouter = require('./routes/Maps');
 
 app.use('/Admin', AdminRouter);
 app.use('/ContactUs', ContactUsRouter);
@@ -29,6 +30,7 @@ app.use('/AboutUs', AboutUsRouter);
 app.use('/Team', TeamRouter);
 app.use('/Gallery', GalleryRouter);
 app.use('/Video', VideoRouter);
+app.use('/Maps', MapsRouter);
 
 app.listen(port, () => {
     console.log(`Server is running on port: ${port}`);
