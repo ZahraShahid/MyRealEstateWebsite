@@ -1,6 +1,6 @@
 // import logo from './logo.svg';
 import "./App.css";
-import React, { Component } from "react";
+import React from "react";
 import {
   BrowserRouter as Router,
   Route,
@@ -10,7 +10,7 @@ import {
 import HomeV1 from "./components/home-v1";
 import ProptertyDetails from "./components/property-details";
 import ProptertyGrid from "./components/property-grid";
-import Propterty from "./components/property";
+// import Propterty from "./components/property";
 import About from "./components/about";
 import Team from "./components/team";
 import Gallery from "./components/gallery";
