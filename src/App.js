@@ -1,16 +1,11 @@
-// import logo from './logo.svg';
 import "./App.css";
 import React from "react";
-import {
-  BrowserRouter as Router,
-  Route,
-  Routes,
-} from "react-router-dom";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 
 import HomeV1 from "./components/home-v1";
-import ProptertyDetails from "./components/property-details";
-import ProptertyGrid from "./components/property-grid";
-// import Propterty from "./components/property";
+import PropertyDetails from "./components/property-details";
+import PropertyGrid from "./components/property-grid";
+import Property from "./components/property";
 import About from "./components/about";
 import Team from "./components/team";
 import Gallery from "./components/gallery";
@@ -33,12 +28,13 @@ function App() {
           <Route path="/gallery" exact element={<Gallery />} />
           <Route path="/team" exact element={<Team />} />
           <Route path="/office-map" exact element={<MapPage />} />
-          <Route path="/property-grid" exact element={<ProptertyGrid />} />
+          <Route path="/property" exact element={<Property />} />
+          <Route path="/property-grid" exact element={<PropertyGrid />} />
           <Route path="/add-property" exact element={<AddProperty />} />
           <Route
             path="/property-details"
             exact
-            element={<ProptertyDetails />}
+            element={<PropertyDetails />}
           />
         </Routes>
       </div>

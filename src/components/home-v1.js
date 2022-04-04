@@ -10,7 +10,6 @@ import Property from './section-components/property';
 import Cta from './section-components/call-to-action';
 import Agent from './section-components/agent';
 import Client from './section-components/client';
-import LatestNews from './blog-components/latest-news';
 import FooterV2 from './global-components/footer-v2';
 
 const Home_V1 = () => {
