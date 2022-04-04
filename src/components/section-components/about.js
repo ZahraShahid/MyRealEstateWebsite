@@ -1,6 +1,4 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
-import parse from 'html-react-parser'; 
 import axios from 'axios';
 class About extends Component {
 
@@ -67,7 +65,6 @@ class About extends Component {
                             </ul>
                           </div>
                         </div>  
-                        {/* <a className="btn btn-base" href="#">SEE MORE</a> */}
                       </div>
                     </div>
                   </div>
@@ -78,4 +75,4 @@ class About extends Component {
         }
 }
 
-export default About
+export default About;

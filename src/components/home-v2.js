@@ -8,7 +8,6 @@ import Testimonial from './section-components/testimonial-v2';
 import Client from './section-components/client-v2';
 import Agent from './section-components/agent-v2';
 import ProductCategories from './section-components/product-categories';
-import LatestNews from './blog-components/latest-news-v2';
 import Footer from './global-components/footer';
 
 const Home_V2 = () => {
@@ -22,7 +21,6 @@ const Home_V2 = () => {
         <Client />
         <Agent />
         <ProductCategories />
-        <LatestNews />
         <Footer />
     </div>
 }

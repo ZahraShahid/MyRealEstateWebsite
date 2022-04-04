@@ -9,7 +9,6 @@ import Testimonial from './section-components/testimonial-v3';
 import ProductCategories from './section-components/product-categories-v2';
 import Agent from './section-components/agent-v4';
 import FeaturedProperty from './section-components/featured-property';
-import LatestNews from './blog-components/latest-news-v3';
 import Footer from './global-components/footer';
 
 const Home_V3 = () => {
@@ -24,7 +23,6 @@ const Home_V3 = () => {
         <ProductCategories />
         <Agent />
         <FeaturedProperty />
-        <LatestNews />
         <Footer />
     </div>
 }
