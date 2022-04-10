@@ -43,6 +43,7 @@ class PropertyGrid extends Component {
               </div>
             </div>
             <div className="col-lg-4 col-md-6">
+              <Link to="/property-details">
               <div className="single-product-wrap style-2">
                 <div className="thumb">
                   <img
@@ -106,6 +107,7 @@ class PropertyGrid extends Component {
                   </span>
                 </div>
               </div>
+              </Link>
             </div>
             <div className="col-lg-4 col-md-6">
               <div className="single-product-wrap style-2">
