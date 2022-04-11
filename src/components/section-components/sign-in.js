@@ -52,8 +52,6 @@ class SignIn extends Component {
   }
 
   render() {
-    let publicUrl = process.env.PUBLIC_URL + "/";
-
     return (
       <div className="signin-page-area pd-top-100 ">
         <div className="container">
