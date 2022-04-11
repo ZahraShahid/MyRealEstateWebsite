@@ -4,7 +4,8 @@ import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 
 import HomeV1 from "./components/home-v1";
 import PropertyDetails from "./components/property-details";
-import PropertyGrid from "./components/property-grid";
+import PropertyForSale from "./components/property-grid-for-sale";
+import PropertyForRent from "./components/property-grid-for-rent";
 import Property from "./components/property";
 import About from "./components/about";
 import Team from "./components/team";
@@ -29,13 +30,18 @@ function App() {
           <Route path="/team" exact element={<Team />} />
           <Route path="/office-map" exact element={<MapPage />} />
           <Route path="/property" exact element={<Property />} />
-          <Route path="/property-grid" exact element={<PropertyGrid />} />
-          <Route path="/add-property" exact element={<AddProperty />} />
           <Route
-            path="/property-details"
+            path="/property-for-sale"
             exact
-            element={<PropertyDetails />}
+            element={<PropertyForSale />}
           />
+          <Route
+            path="/property-for-rent"
+            exact
+            element={<PropertyForRent />}
+          />
+          <Route path="/add-property" exact element={<AddProperty />} />
+          <Route path="/property-details" exact element={<PropertyDetails />} />
         </Routes>
       </div>
     </Router>

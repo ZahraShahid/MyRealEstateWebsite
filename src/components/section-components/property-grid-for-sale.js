@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
-class PropertyGrid extends Component {
+class PropertyGridForSale extends Component {
   componentDidMount() {
     const $ = window.$;
 
@@ -652,4 +652,4 @@ class PropertyGrid extends Component {
   }
 }
 
-export default PropertyGrid;
+export default PropertyGridForSale;

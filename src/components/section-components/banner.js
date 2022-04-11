@@ -52,7 +52,7 @@ class Banner extends Component {
 			                </div>
 			              </div>
 			              <div className="col-md-3">
-			                <Link className="btn btn-base w-100" to="/property-grid"><i className="fa fa-search mr-1" /> Search</Link>
+			                <Link className="btn btn-base w-100" to="/property-for-sale"><i className="fa fa-search mr-1" /> Search</Link>
 			              </div>
 			            </div>
 			          </form>

@@ -1,17 +1,17 @@
 import React from 'react';
 import Navbar from './global-components/navbar';
 import PageHeader from './global-components/page-header';
-import PropertyGrid from './section-components/property-grid';
+import PropertyGridForSale from './section-components/property-grid-for-sale';
 import Footer from './global-components/footer-v2';
 
-const PropertGridPage = () => {
+const PropertGridForSalePage = () => {
     return <div>
         <Navbar />
-        <PageHeader headertitle="Property Grid"  />
-        <PropertyGrid />
+        <PageHeader headertitle="Property For Sale"  />
+        <PropertyGridForSale />
         <Footer />
     </div>
 }
 
-export default PropertGridPage
+export default PropertGridForSalePage;
 

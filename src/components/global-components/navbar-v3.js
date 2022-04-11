@@ -37,7 +37,7 @@ class NavbarV3 extends Component {
 			            <a href="#">Property</a>
 			            <ul className="sub-menu">
 			              <li><Link to="/property">Property</Link></li>
-			              <li><Link to="/property-grid">Property Grid</Link></li>
+			              <li><Link to="/property-for-sale">Property Grid</Link></li>
 			              <li><Link to="/property-details">Property Details</Link></li>
 			            </ul>
 			          </li>
