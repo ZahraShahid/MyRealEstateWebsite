@@ -44,7 +44,7 @@ class BannerV2 extends Component {
 			            </div>
 			          </div>
 			          <div className="col-md-2">
-			            <Link className="btn btn-base w-md-auto w-100" to="/property-grid">Search</Link>
+			            <Link className="btn btn-base w-md-auto w-100" to="/property-for-sale">Search</Link>
 			          </div>
 			        </div>
 			      </form>

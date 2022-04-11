@@ -123,10 +123,10 @@ class Footer_v2 extends Component {
                   <h4 className="widget-title">Explore</h4>
                   <ul>
                     <li>
-                      <Link to="/property-grid">- For Sale Properties</Link>
+                      <Link to="/property-for-sale">- For Sale Properties</Link>
                     </li>
                     <li>
-                      <Link to="/property-grid">- For Rent Properties</Link>
+                      <Link to="/property-for-rent">- For Rent Properties</Link>
                     </li>
                   </ul>
                 </div>

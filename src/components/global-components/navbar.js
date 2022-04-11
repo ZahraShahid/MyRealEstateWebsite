@@ -30,7 +30,6 @@ class Navbar extends Component {
     let publicUrl = process.env.PUBLIC_URL + "/";
     return (
       <div className="navbar-area navbar-area-1">
-        {/* navbar top start */}
         <div className="navbar-top">
           <div className="container">
             <div className="row">
@@ -133,12 +132,11 @@ class Navbar extends Component {
                   <Link to="/">Home</Link>
                 </li>
                 <li className="menu-item-has-children current-menu-item">
-                  <Link to="/property-grid">Property</Link>
-                  {/* <ul className="sub-menu">
-			              <li><Link to="/property">Property</Link></li>
-			              <li><Link to="/property-grid">Property Grid</Link></li>
-			              <li><Link to="/property-details">Property Details</Link></li>
-			            </ul> */}
+                <a href="#">Property</a>
+                  <ul className="sub-menu">
+			              <li><Link to="/property-for-sale">Property For Sale</Link></li>
+			              <li><Link to="/property-for-rent">Property For Rent</Link></li>
+			            </ul>
                 </li>
                 <li className="menu-item-has-children current-menu-item">
                   <a href="#">Pages</a>
