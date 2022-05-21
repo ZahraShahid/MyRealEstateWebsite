@@ -64,9 +64,9 @@ class Footer_v1 extends Component {
 			        </div>
 			        <div className="col-lg-4 col-md-9">
 			          <div className="widget widget_subscribe mb-4">
-			            <h4 className="widget-title">Newslatter</h4>
+			            <h4 className="widget-title">Newsletter</h4>
 			            <div className="details">
-			              <p>Lorem ipsum dolor sit amet,</p>
+			              <p>Subscribe to our newsletter below</p>
 			              <div className="footer-subscribe-inner">
 			                <input type="text" placeholder="Your Mail" />
 			                <a className="btn btn-base" href="#">Subscribe</a>
