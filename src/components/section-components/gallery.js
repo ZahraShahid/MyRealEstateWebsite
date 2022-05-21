@@ -26,7 +26,6 @@ class Gallery extends Component {
       });
   }
   render() {
-    //  console.log(this.state.images);
 
     return (
       <div className="agent-area text-center pd-top-118 pd-bottom-90">

@@ -123,19 +123,19 @@ class Footer_v2 extends Component {
                   <h4 className="widget-title">Explore</h4>
                   <ul>
                     <li>
-                      <Link to="/property-for-sale">- For Sale Properties</Link>
+                      <Link to="/property-for-sale">For Sale Properties</Link>
                     </li>
                     <li>
-                      <Link to="/property-for-rent">- For Rent Properties</Link>
+                      <Link to="/property-for-rent">For Rent Properties</Link>
                     </li>
                   </ul>
                 </div>
               </div>
               <div className="col-lg-4 col-md-6">
                 <div className="widget widget_subscribe">
-                  <h4 className="widget-title">Newslatter</h4>
+                  <h4 className="widget-title">Newsletter</h4>
                   <div className="details">
-                    <p>Lorem ipsum dolor sit amet,</p>
+                    <p>Subscribe to our newsletter below</p>
                     <div className="footer-subscribe-inner">
                       <input type="text" placeholder="Your Mail" />
                       <a className="btn btn-base" href="#">

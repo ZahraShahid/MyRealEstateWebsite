@@ -163,14 +163,13 @@ class PropertyDetails extends Component {
                         <li>Bathrooms: 3</li>
                         <li>Total Rooms: 12</li>
                         <li>Year Built: 2020</li>
-        
                       </ul>
                     </div>
                     <div className="col-md-4">
                       <ul>
-                      <li>Kitchen: 2</li>
-                      <li>Area: 1258</li>
-                      <li>Owner: XYZ</li>
+                        <li>Kitchen: 2</li>
+                        <li>Area: 1258</li>
+                        <li>Owner: XYZ</li>
                       </ul>
                     </div>
                   </div>
@@ -229,122 +228,15 @@ class PropertyDetails extends Component {
                   </div>
                 </div>
                 <div className="single-property-grid">
-                  <h4>Property Attachment</h4>
-                  <div className="row">
-                    <div className="col-sm-6">
-                      <a href="PDFLINK" download>
-                        <img
-                          src={publicUrl + "assets/img/icon/9.png"}
-                          alt="img"
-                        />
-                      </a>
-                    </div>
-                    <div className="col-sm-6 mt-2 mt-sm-0">
-                      <a href="PDFLINK" download>
-                        <img
-                          src={publicUrl + "assets/img/icon/9.png"}
-                          alt="img"
-                        />
-                      </a>
-                    </div>
-                  </div>
-                </div>
-                <div className="single-property-grid">
                   <h4>Estate Location</h4>
                   <div className="property-map">
                     <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d198059.49240377638!2d-84.68048827338674!3d39.13652252762691!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sbd!4v1615660592820!5m2!1sen!2sbd" />
                   </div>
                 </div>
-                <form className="single-property-comment-form">
-                  <div className="single-property-grid bg-black">
-                    <div className="single-property-form-title">
-                      <div className="row">
-                        <div className="col-md-8">
-                          <h4>Post Your Comment</h4>
-                        </div>
-                        <div className="col-md-4 text-md-right">
-                          <div className="ratting-inner">
-                            <i className="fa fa-star" />
-                            <i className="fa fa-star" />
-                            <i className="fa fa-star" />
-                            <i className="fa fa-star" />
-                            <i className="fa fa-star" />
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div className="row">
-                      <div className="col-lg-6">
-                        <label className="single-input-inner style-bg">
-                          <span className="label">Enter Your Name</span>
-                          <input type="text" placeholder="Your name here...." />
-                        </label>
-                      </div>
-                      <div className="col-lg-6">
-                        <label className="single-input-inner style-bg">
-                          <span className="label">Enter Your MAil</span>
-                          <input
-                            type="text"
-                            placeholder="Your email here...."
-                          />
-                        </label>
-                      </div>
-                      <div className="col-12">
-                        <label className="single-input-inner style-bg">
-                          <span className="label">Enter Your Messege</span>
-                          <textarea
-                            placeholder="Enter your messege here...."
-                            defaultValue={""}
-                          />
-                        </label>
-                      </div>
-                      <div className="col-12 mb-4">
-                        <button className="btn btn-base radius-btn">
-                          Submit Now
-                        </button>
-                      </div>
-                    </div>
-                  </div>
-                </form>
               </div>
             </div>
             <div className="col-lg-4">
               <aside className="sidebar-area">
-                <div className="widget widget-category">
-                  <h5 className="widget-title">Category</h5>
-                  <ul>
-                    <li>
-                      <a href="#">
-                        Design <span>26</span>
-                      </a>
-                    </li>
-                    <li>
-                      <a href="#">
-                        Villa House <span>20</span>
-                      </a>
-                    </li>
-                    <li>
-                      <a href="#">
-                        Business <span>21</span>
-                      </a>
-                    </li>
-                    <li>
-                      <a href="#">
-                        Global World <span>31</span>
-                      </a>
-                    </li>
-                    <li>
-                      <a href="#">
-                        Technology <span>12</span>
-                      </a>
-                    </li>
-                    <li>
-                      <a href="#">
-                        Ui Design <span>12</span>
-                      </a>
-                    </li>
-                  </ul>
-                </div>
                 <div className="widget widget-place">
                   <h5 className="widget-title">Place</h5>
                   <ul>

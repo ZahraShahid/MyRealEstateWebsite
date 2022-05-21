@@ -6,7 +6,6 @@ import HomeV1 from "./components/home-v1";
 import PropertyDetails from "./components/property-details";
 import PropertyForSale from "./components/property-grid-for-sale";
 import PropertyForRent from "./components/property-grid-for-rent";
-import Property from "./components/property";
 import About from "./components/about";
 import Team from "./components/team";
 import Gallery from "./components/gallery";
@@ -29,7 +28,6 @@ function App() {
           <Route path="/gallery" exact element={<Gallery />} />
           <Route path="/team" exact element={<Team />} />
           <Route path="/office-map" exact element={<MapPage />} />
-          <Route path="/property" exact element={<Property />} />
           <Route
             path="/property-for-sale"
             exact

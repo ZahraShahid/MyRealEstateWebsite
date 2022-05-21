@@ -4,6 +4,7 @@ const Schema = mongoose.Schema;
 const RentPropertyDetailSchema = new Schema(
   {
     PropertyTitle: { type: String, minlength: 3, required: true },
+    PropertyTagline: { type: String, minlength: 3, required: true },
     Address: { type: String, minlength: 5, required: true },
     Price: { type: Number, minLength: 5, required: true },
     DatePosted: { type: Date, required: true },
