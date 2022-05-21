@@ -1,11 +1,30 @@
 import React, { Component } from "react";
 import PropertyCard from "./property-card";
+import axios from "axios";
 class PropertyGridForRent extends Component {
-  componentDidMount() {
-    const $ = window.$;
+  constructor(props) {
+    super(props);
 
-    $("body").addClass("body-bg");
+    this.state = {
+      RentProperties: [],
+    };
   }
+  componentDidMount() {
+    axios
+      .get("http://localhost:5000/RentPropertyDetail/")
+      .then((response) => {
+        if (response.data) {
+          this.setState({
+            RentProperties: response.data,
+          });
+          // console.log(response.data);
+        }
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  }
+ 
 
   render() {
     return (
