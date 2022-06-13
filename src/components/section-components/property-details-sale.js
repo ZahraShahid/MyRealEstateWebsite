@@ -1,14 +1,58 @@
-import React, { Component } from "react";
-import { Link } from "react-router-dom";
-class PropertyDetails extends Component {
-  componentDidMount() {
-    const $ = window.$;
+import React, { useState, useEffect } from "react";
+import { Link, useLocation } from "react-router-dom";
+import axios from "axios";
 
-    $("body").addClass("body-bg");
-  }
-
-  render() {
+const PropertyDetailsSale = () =>
+  // {
+  // PropertyId,
+  // PropertyTitle,
+  // PropertyTagline,
+  // Address,
+  // Price,    //Needs to be formatted or changed
+  // DatePosted,
+  // Description,
+  // PropertyMapLocation,
+  // MainImage,
+  // Images,
+  // Bedrooms,
+  // Livingrooms,
+  // TypeOfProperty,
+  // Bathrooms,
+  // TotalRooms,
+  // YearBuilt,
+  // Kitchens,
+  // AreaSqFt,
+  // Owner,
+  // Amenities,
+  // Places,
+  // PopularTags,
+  // }
+  {
+    const location = useLocation();
+    const data = location.state;
     let publicUrl = process.env.PUBLIC_URL + "/";
+
+    const [propertyData, getpropertyData] = useState("");
+
+    useEffect(() => {
+      getProperty();
+    }, []);
+
+    const getProperty = () =>
+      axios
+        .get(
+          "http://localhost:5000/SalePropertyDetail/property-details-sale/" +
+            data,
+          {}
+        )
+        .then((res) => {
+          const allPropertyData = res.data;
+          //   console.log(allPropertyData);
+          // return res.data;
+          getpropertyData(allPropertyData);
+        });
+
+    // console.log(propertyData);
 
     return (
       <div className="property-page-area pd-top-120 pd-bottom-90 ">
@@ -17,7 +61,7 @@ class PropertyDetails extends Component {
             <div className="property-details-top-inner">
               <div className="row">
                 <div className="col-lg-7">
-                  <h3>Property Title</h3>
+                  <h3>PropertyTitle</h3>
                   <p>
                     <img
                       src={publicUrl + "assets/img/icon/location2.png"}
@@ -34,11 +78,11 @@ class PropertyDetails extends Component {
                 <div className="col-lg-5 text-lg-right">
                   <h4>$ 80,650.00</h4>
                   <div className="btn-wrap">
-                    <a className="btn btn-base btn-sm" href="#">
+                    <a className="btn btn-blue btn-sm" href="#">
                       BUILD
                     </a>
-                    <a className="btn btn-blue btn-sm" href="#">
-                      BUY
+                    <a className="btn btn-base btn-sm" href="#">
+                      SALE
                     </a>
                     <a className="btn btn-blue btn-sm" href="#">
                       RENT
@@ -273,7 +317,6 @@ class PropertyDetails extends Component {
         </div>
       </div>
     );
-  }
-}
+  };
 
-export default PropertyDetails;
+export default PropertyDetailsSale;

@@ -1,18 +1,18 @@
 import React from "react";
 import Navbar from "./global-components/navbar";
 import PageHeader from "./global-components/page-header";
-import SignIn from "./section-components/sign-up";
+import PropertyDetailsSalePage from "./section-components/property-details-sale";
 import Footer from "./global-components/footer-v2";
 
-const SignUpPage = () => {
+const PropertyDetailsSale = () => {
   return (
     <div>
       <Navbar />
-      <PageHeader headertitle="Sign Up" />
-      <SignIn />
+      <PageHeader headertitle="Property Details" />
+      <PropertyDetailsSalePage />
       <Footer />
     </div>
   );
 };
 
-export default SignUpPage;
+export default PropertyDetailsSale;

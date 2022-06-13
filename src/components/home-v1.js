@@ -2,7 +2,7 @@ import React from "react";
 import Navbar from "./global-components/navbar";
 import Banner from "./section-components/banner";
 import Service from "./section-components/service";
-import Video from "./section-components/video";
+import Video from "./section-components/video"; //Video to be implemented?
 import Testimonial from "./section-components/testimonial";
 import Agent from "./section-components/agent";
 import FooterV2 from "./global-components/footer-v2";
