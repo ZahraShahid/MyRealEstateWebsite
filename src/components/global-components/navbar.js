@@ -67,9 +67,6 @@ class Navbar extends Component {
               <div className="col-lg-4">
                 <ul className="topbar-right text-lg-right text-center">
                   <li>
-                    <Link className="ml-0" to="/sign-up">
-                      Register
-                    </Link>
                     <Link to="/sign-in">Login</Link>
                   </li>
                   <li className="social-area">
@@ -132,11 +129,15 @@ class Navbar extends Component {
                   <Link to="/">Home</Link>
                 </li>
                 <li className="menu-item-has-children current-menu-item">
-                <a href="#">Property</a>
+                  <a href="#">Property</a>
                   <ul className="sub-menu">
-			              <li><Link to="/property-for-sale">Property For Sale</Link></li>
-			              <li><Link to="/property-for-rent">Property For Rent</Link></li>
-			            </ul>
+                    <li>
+                      <Link to="/property-for-sale">Property For Sale</Link>
+                    </li>
+                    <li>
+                      <Link to="/property-for-rent">Property For Rent</Link>
+                    </li>
+                  </ul>
                 </li>
                 <li className="menu-item-has-children current-menu-item">
                   <a href="#">Pages</a>
@@ -149,9 +150,6 @@ class Navbar extends Component {
                     </li>
                     <li>
                       <Link to="/sign-in">Sign In</Link>
-                    </li>
-                    <li>
-                      <Link to="/sign-up">Sign Up</Link>
                     </li>
                     <li>
                       <Link to="/add-property">Add Property</Link>

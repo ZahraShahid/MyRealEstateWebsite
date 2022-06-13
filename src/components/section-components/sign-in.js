@@ -63,7 +63,7 @@ class SignIn extends Component {
                     <label className="single-input-inner style-bg-border">
                       <input
                         type="text"
-                        placeholder="Name"
+                        placeholder="Username"
                         value={this.state.username}
                         onChange={this.onChangeUsername}
                         required

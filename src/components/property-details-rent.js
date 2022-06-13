@@ -1,18 +1,18 @@
 import React from "react";
 import Navbar from "./global-components/navbar";
 import PageHeader from "./global-components/page-header";
-import Property from "./section-components/property-page";
+import PropertyDetailsRentPage from "./section-components/property-details-rent";
 import Footer from "./global-components/footer-v2";
 
-const PropertyPage = () => {
+const PropertyDetailsRent = () => {
   return (
     <div>
       <Navbar />
-      <PageHeader headertitle="Property" />
-      <Property />
+      <PageHeader headertitle="Property Details" />
+      <PropertyDetailsRentPage />
       <Footer />
     </div>
   );
 };
 
-export default PropertyPage;
+export default PropertyDetailsRent;

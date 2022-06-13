@@ -132,16 +132,16 @@ class Footer_v2 extends Component {
                 </div>
               </div>
               <div className="col-lg-4 col-md-6">
-                <div className="widget widget_subscribe">
-                  <h4 className="widget-title">Newsletter</h4>
-                  <div className="details">
-                    <p>Subscribe to our newsletter below</p>
-                    <div className="footer-subscribe-inner">
-                      <input type="text" placeholder="Your Mail" />
-                      <a className="btn btn-base" href="#">
-                        Subscribe
-                      </a>
-                    </div>
+                <div className="widget widget-tags go-top">
+                  <h4 className="widget-title mb-3">House Tags</h4>
+                  <div className="tagcloud mt-0">
+                    <Link to="/blog">DHA</Link>
+                    <Link to="/blog">Bahria Town</Link>
+                    <Link to="/blog">Lagoons</Link>
+                    <Link to="/blog">Park View Villas</Link>
+                    <Link to="/blog">PCSIR</Link>
+                    <Link to="/blog">Lake City</Link>
+                    <Link to="/blog">Bahria Orchards</Link>
                   </div>
                 </div>
               </div>

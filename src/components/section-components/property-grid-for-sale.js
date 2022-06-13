@@ -1,7 +1,6 @@
 import React, { Component } from "react";
-import PropertyCard from "./property-card";
+import PropertyCard from "./property-card-sale";
 import axios from "axios";
-
 class PropertyGridForSale extends Component {
   constructor(props) {
     super(props);
@@ -12,20 +11,18 @@ class PropertyGridForSale extends Component {
   }
   componentDidMount() {
     axios
-      .get("http://localhost:5000/RentPropertyDetail/")
+      .get("http://localhost:5000/SalePropertyDetail/")
       .then((response) => {
         if (response.data) {
           this.setState({
             SaleProperties: response.data,
           });
-          console.log(response.data);
         }
       })
       .catch((error) => {
         console.log(error);
       });
   }
- 
 
   render() {
     return (
@@ -36,7 +33,7 @@ class PropertyGridForSale extends Component {
               <div className="product-search-inner bg-main">
                 <div className="row custom-gutters-20">
                   <div className="col-md-3 align-self-center">
-                    <h5>21 Properties</h5>
+                    <h5>{this.state.SaleProperties.length} Properties</h5>
                   </div>
                   <div className="col-md-6 mt-2 mt-md-0">
                     <div className="widget-search">
@@ -60,47 +57,24 @@ class PropertyGridForSale extends Component {
                 </div>
               </div>
             </div>
-
-            <PropertyCard />
-            <PropertyCard />
-            <PropertyCard />
-            <PropertyCard />
-            <PropertyCard />
-
-            <div className="pagination-area text-center mt-4">
-              <ul className="pagination">
-                <li className="page-item">
-                  <a className="page-link" href="#">
-                    <i className="la la-angle-double-left" />
-                  </a>
-                </li>
-                <li className="page-item active">
-                  <a className="page-link" href="#">
-                    1
-                  </a>
-                </li>
-                <li className="page-item">
-                  <a className="page-link" href="#">
-                    2
-                  </a>
-                </li>
-                <li className="page-item">
-                  <a className="page-link" href="#">
-                    3
-                  </a>
-                </li>
-                <li className="page-item">
-                  <a className="page-link" href="#">
-                    ...
-                  </a>
-                </li>
-                <li className="page-item">
-                  <a className="page-link" href="#">
-                    <i className="la la-angle-double-right" />
-                  </a>
-                </li>
-              </ul>
-            </div>
+            {this.state.SaleProperties.map((property) => {
+              return (
+                <PropertyCard
+                  key={Math.random()}
+                  PropertyId={property._id}
+                  PropertyTitle={property.PropertyTitle}
+                  PropertyTagline={property.PropertyTagline}
+                  Address={property.Address}
+                  City={property.City}
+                  Price={property.Price}
+                  MainImage={property.MainImage}
+                  Bedrooms={property.Bedrooms}
+                  Bathrooms={property.Bathrooms}
+                  AreaSqFt={property.AreaSqFt}
+                  Owner={property.Owner}
+                />
+              );
+            })}
           </div>
         </div>
       </div>
