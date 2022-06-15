@@ -135,13 +135,13 @@ class Footer_v2 extends Component {
                 <div className="widget widget-tags go-top">
                   <h4 className="widget-title mb-3">House Tags</h4>
                   <div className="tagcloud mt-0">
-                    <Link to="/blog">DHA</Link>
-                    <Link to="/blog">Bahria Town</Link>
-                    <Link to="/blog">Lagoons</Link>
-                    <Link to="/blog">Park View Villas</Link>
-                    <Link to="/blog">PCSIR</Link>
-                    <Link to="/blog">Lake City</Link>
-                    <Link to="/blog">Bahria Orchards</Link>
+                    <Link to="/">DHA</Link>
+                    <Link to="/">Bahria Town</Link>
+                    <Link to="/">Lagoons</Link>
+                    <Link to="/">Park View Villas</Link>
+                    <Link to="/">PCSIR</Link>
+                    <Link to="/">Lake City</Link>
+                    <Link to="/">Bahria Orchards</Link>
                   </div>
                 </div>
               </div>
