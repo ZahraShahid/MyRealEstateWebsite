@@ -13,7 +13,7 @@ router.route("/property-details-sale/:id").get(function (req, res) {
     if (!property) {
       return res.json("Property not found :(").end();
     }
-    return res.json(`Property found! Details: ${property}`).end();
+    return res.json(property).end();
   });
 });
 

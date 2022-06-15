@@ -27,7 +27,6 @@ class Team extends Component {
   }
 
   render() {
-    let publicUrl = process.env.PUBLIC_URL + "/";
 
     return (
       <div className="agent-area text-center pd-top-118 pd-bottom-90">
