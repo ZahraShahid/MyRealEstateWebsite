@@ -12,7 +12,7 @@ class Banner extends Component {
 			      <div className="row justify-content-center">
 			        <div className="col-lg-8">
 			          <div className="banner-inner text-center">
-			            <p>Lorem ipsum dolor sit amet, consecteLorem ipsum dolor sit amet,</p>
+			            	
 			            <div className="line" />
 			            <h2>The Best Way To Find Your Perfect Home</h2>
 			          </div>
