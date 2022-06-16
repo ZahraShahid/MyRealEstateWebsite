@@ -36,7 +36,6 @@ class Gallery extends Component {
     return <div className="agent-area text-center pd-top-118 pd-bottom-90">
             <div className="container">
               <div className="row">
-
               {
                     this.state.Images.map((currentImage) => { 
                       return (
@@ -46,15 +45,10 @@ class Gallery extends Component {
                       />
                       ); 
                     })       
-                  }
-               
-               
-                       
-                
+                } 
               </div>
             </div>
           </div>
-
         }
 }
 

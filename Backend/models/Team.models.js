@@ -11,10 +11,10 @@ const TeamSchema = new Schema(
         role: {type:String},
         
 
-        facebook: {type:String, minlength:5 },
-        twitter: {type:String, minlength:5 },
-        instagram: {type:String, minlength:5 },
-        linkedIn: {type:String, minlength:5 },
+        facebook: {type:String, minlength:2 },
+        twitter: {type:String, minlength:2 },
+        instagram: {type:String, minlength:2 },
+        linkedIn: {type:String, minlength:2 },
     },
     {
         timestamps: true,
