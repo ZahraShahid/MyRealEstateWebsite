@@ -33,6 +33,7 @@ function App() {
           <Route path="/office-map" exact element={<MapPage/>} />
           <Route path="/property-grid" exact element={<ProptertyGrid/>} />
           <Route path="/add-property" exact element={<AddProperty/>} />
+          <Route path="/property-details" exact element={<ProptertyDetails/>} />
         </Routes>
         </div>
     </Router>

@@ -61,9 +61,9 @@ class About extends Component {
                           </div>
                           <div className="col-md-6">
                             <ul className="single-list-inner">
-                              <li> {this.state.AboutUs.list5}</li>
-                              <li>{this.state.AboutUs.list56}</li>
-                              { <li>{this.state.AboutUs.list7}</li> }
+                              <li>{this.state.AboutUs.list5}</li>
+                              <li>{this.state.AboutUs.list6}</li>
+                              <li>{this.state.AboutUs.list7}</li>
                             </ul>
                           </div>
                         </div>  

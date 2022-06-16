@@ -6,17 +6,17 @@ const contactUsSchema = new Schema(
     {
         description: {type: String, required: true, minlength: 50},
         
-        location: {type: String, required: true, minlength:10 },
+        location: {type: String, required: true, minlength:5 },
         phoneNumber1: {type:String, required: true, minlength:5 },
         phoneNumber2: {type:String, unique: true, minlength:5 },
         phoneNumber3: {type:String, unique: true, minlength:5 },
         
 
-        days1: {type:String, required: true, minlength:5 },
+        days1: {type:String, required: true, minlength:3 },
         days2: {type:String, minlength:3 },
         days3: {type:String, minlength:3 },
             
-        timings1: {type:String, required: true, minlength:5 },
+        timings1: {type:String, required: true, minlength:1 },
         timings2: {type:String, minlength:1 },
         timings3: {type:String, minlength:1 },
 

@@ -67,9 +67,9 @@ class ContactForm extends Component {
                       <div className="row mt-4">
                         <div className="col-md-6">
                           <div className="contact-single-date">
-                            <p><strong>{this.state.ContactUs.days1}</strong> {this.state.ContactUs.timings1}</p>
-                            <p><strong>{this.state.ContactUs.days2}</strong> {this.state.ContactUs.timings2}</p>
-                            <p><strong>{this.state.ContactUs.days3} </strong> {this.state.ContactUs.timings3}</p>
+                            <p><strong>{this.state.ContactUs.days1} : </strong> {this.state.ContactUs.timings1}</p>
+                            <p><strong>{this.state.ContactUs.days2} : </strong> {this.state.ContactUs.timings2}</p>
+                            <p><strong>{this.state.ContactUs.days3} : </strong> {this.state.ContactUs.timings3}</p>
                           </div>
                         </div>
                         <div className="col-md-6 align-self-center text-md-right">
